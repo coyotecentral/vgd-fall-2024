@@ -1,6 +1,7 @@
 extends Node2D
 
 const tile_size = 64.0
+var direction = Vector2.RIGHT
 
 
 # Called when the node enters the scene tree for the first time.
