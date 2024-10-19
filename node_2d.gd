@@ -19,4 +19,4 @@ func _process(delta):
 
 
 func tick():
-	$Sprite2D.position += Vector2.RIGHT * tile_size
+	$Sprite2D.position += direction * tile_size
