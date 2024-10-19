@@ -13,6 +13,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var next_direction = Input.get_vector("left", "right", "down", "up")
+	var dot = direction.dot(next_direction)
+	if next_direction.length() and dot == 0:
+		direction = next_direction
+
 
 func tick():
 	$Sprite2D.position += Vector2.RIGHT * tile_size
