@@ -6,6 +6,7 @@ const tile_size = 64.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.timeout.connect(tick)
+	$Timer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
