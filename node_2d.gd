@@ -3,9 +3,14 @@ extends Node2D
 const tile_size = 64.0
 var direction = Vector2.RIGHT
 
+var sprite = preload("res://segment.tscn")
+var snake = []
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	snake.push_front($Sprite2D)
+	spawn_segment()
 	$Timer.timeout.connect(tick)
 	$Timer.start()
 
@@ -20,3 +25,11 @@ func _process(delta):
 
 func tick():
 	$Sprite2D.position += direction * tile_size
+
+# This function is going to create a new
+# snake segment and add it to the world. We're
+# also going to add it to our snake array.
+func spawn_segment():
+	# Create an "instance" of the scene
+	var new_segment = sprite.instantiate()
+	add_child(new_segment)

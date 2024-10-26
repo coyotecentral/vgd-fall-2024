@@ -1,13 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4racelejj6i2"]
 
-[ext_resource type="Texture2D" uid="uid://dhyhbwo5kesbk" path="res://icon.svg" id="1_cauy3"]
 [ext_resource type="Script" path="res://node_2d.gd" id="1_p82ru"]
+[ext_resource type="PackedScene" uid="uid://bsnmlg811mwwd" path="res://segment.tscn" id="2_t7723"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_p82ru")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_cauy3")
+[node name="Sprite2D" parent="." instance=ExtResource("2_t7723")]
 
 [node name="Timer" type="Timer" parent="."]
