@@ -9,3 +9,4 @@ script = ExtResource("1_p82ru")
 [node name="Sprite2D" parent="." instance=ExtResource("2_t7723")]
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
