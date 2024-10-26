@@ -29,7 +29,8 @@ func tick():
 	# snake[0] gets the first segment of our snake
 	var head_pos = snake[0].position
 	spawn_segment(head_pos + next_pos)
-	snake.pop_back().queue_free()
+	if snake[0].position != $Apple.position:
+		snake.pop_back().queue_free()
 
 # This function is going to create a new
 # snake segment and add it to the world. We're

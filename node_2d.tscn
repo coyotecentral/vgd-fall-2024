@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4racelejj6i2"]
+[gd_scene load_steps=4 format=3 uid="uid://c4racelejj6i2"]
 
+[ext_resource type="Texture2D" uid="uid://dhyhbwo5kesbk" path="res://icon.svg" id="1_cauy3"]
 [ext_resource type="Script" path="res://node_2d.gd" id="1_p82ru"]
 [ext_resource type="PackedScene" uid="uid://bsnmlg811mwwd" path="res://segment.tscn" id="2_t7723"]
 
@@ -10,3 +11,9 @@ script = ExtResource("1_p82ru")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="Apple" type="Sprite2D" parent="."]
+modulate = Color(0.873598, 0, 0.431388, 1)
+position = Vector2(640, 192)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_cauy3")
