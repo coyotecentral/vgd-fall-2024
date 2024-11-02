@@ -31,6 +31,8 @@ func tick():
 	spawn_segment(head_pos + next_pos)
 	if snake[0].position != $Apple.position:
 		snake.pop_back().queue_free()
+	else:
+		move_apple()
 
 # This function is going to create a new
 # snake segment and add it to the world. We're
@@ -43,7 +45,7 @@ func spawn_segment(position):
 	new_segment.position = position
 
 func move_apple():
-	$Apple.position = random_position
+	$Apple.position = random_position() * tile_size
 
 func random_position():
 	var vector = Vector2(randi_range(0, 10), randi_range(0, 10))
