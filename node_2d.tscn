@@ -17,3 +17,9 @@ modulate = Color(0.873598, 0, 0.431388, 1)
 position = Vector2(640, 192)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_cauy3")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(3, 3)
+text = "Score: 0"

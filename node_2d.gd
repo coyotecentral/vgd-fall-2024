@@ -5,6 +5,7 @@ var direction = Vector2.RIGHT
 
 var sprite = preload("res://segment.tscn")
 var snake = []
+var score = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +34,8 @@ func tick():
 		snake.pop_back().queue_free()
 	else:
 		move_apple()
+		score = score + 1
+		$Label.text = "Score %d" % score
 
 # This function is going to create a new
 # snake segment and add it to the world. We're
