@@ -36,6 +36,8 @@ func tick():
 		move_apple()
 		score = score + 1
 		$Label.text = "Score %d" % score
+	if check_collision():
+		print("End the game")
 
 # This function is going to create a new
 # snake segment and add it to the world. We're
@@ -53,3 +55,10 @@ func move_apple():
 func random_position():
 	var vector = Vector2(randi_range(0, 10), randi_range(0, 10))
 	return vector
+
+func check_collision():
+	var head = snake[0]
+	for segment in snake.slice(1):
+		if segment.position == head.position:
+			return true
+	return false
