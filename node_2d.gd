@@ -37,6 +37,8 @@ func tick():
 		score = score + 1
 		$Label.text = "Score %d" % score
 	if check_collision():
+		$Timer.paused = true
+		$GameOver.set_deferred("visible", true)
 		print("End the game")
 
 # This function is going to create a new
